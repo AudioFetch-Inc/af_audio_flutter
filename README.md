@@ -126,6 +126,14 @@ Similarly, to mute or unmute audio, call:
       }
     }
 
+Finally, the audio service can be stopped and restarted:
+
+    _afAudioFlutterPlugin.stopService();
+
+    _afAudioFlutterPlugin.startService();
+
+When the service is stopped, calls to play, mute, etc do not have any effect.
+
 
 ## iOS-specific Integration
 

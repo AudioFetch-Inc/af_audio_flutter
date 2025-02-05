@@ -172,7 +172,28 @@ class _MyAppState extends State<MyApp> {
                       }),
                     )
                   ,
+                  
                   SizedBox(height: 10),
+                  TextButton(
+                    child: Text('Stop Service'),
+                    style: buttonStyle,
+                    onPressed: (() { 
+                      _afAudioFlutterPlugin.stopService();
+                      setState( () {isPlaying = true;});
+                    }),
+                  ),
+                  SizedBox(height: 10),
+                  TextButton(
+                    child: Text('Start Service'),
+                    style: buttonStyle,
+                    onPressed: (() { 
+                      _afAudioFlutterPlugin.startService();
+                      setState( () {isPlaying = true;});
+                    }),
+                  ),
+
+
+
                 ])),
               ]))
       );

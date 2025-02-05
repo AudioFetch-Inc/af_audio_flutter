@@ -27,7 +27,15 @@ abstract class AfAudioFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
+  Future<bool?> printLog() {
+    throw UnimplementedError('printLog() has not been implemented.');
+  }
+
   Future<bool?> startService() {
+    throw UnimplementedError('startService() has not been implemented.');
+  }
+
+  Future<bool?> stopService() {
     throw UnimplementedError('startService() has not been implemented.');
   }
 

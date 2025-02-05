@@ -16,8 +16,20 @@ class MethodChannelAfAudioFlutter extends AfAudioFlutterPlatform {
   }
 
   @override
+  Future<bool?> printLog() async {
+    final success = await methodChannel.invokeMethod<bool>('printLog');
+    return success;
+  }
+
+  @override
   Future<bool?> startService() async {
     final success = await methodChannel.invokeMethod<bool>('startService');
+    return success;
+  }
+
+  @override
+  Future<bool?> stopService() async {
+    final success = await methodChannel.invokeMethod<bool>('stopService');
     return success;
   }
 

@@ -83,6 +83,10 @@ public class AfAudioFlutterPlugin implements FlutterPlugin, MethodCallHandler, A
       startAFAudioService();
       result.success(true);
     }
+    else if (call.method.equals("stopService")) {
+      stopAFAudioService();
+      result.success(true);
+    }
     else if (call.method.equals("startAudio")) {
       // Tell the audio service to play that channel
 
@@ -190,6 +194,7 @@ public class AfAudioFlutterPlugin implements FlutterPlugin, MethodCallHandler, A
                 activity.unbindService(mAFAudioSvcConn);
             }
             mAFAudioSvc.quit();
+            mAFAudioSvc = null;
         }
     }
 }

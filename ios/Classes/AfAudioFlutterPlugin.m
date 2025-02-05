@@ -20,6 +20,11 @@
     [audioManager startService];
     result(nil);
 
+  } else if ([@"stopService" isEqualToString:call.method]) {
+    AudioManager* audioManager = AudioManager.shared;
+    [audioManager stopService];
+    result(nil);
+
   } else if ([@"startAudio" isEqualToString:call.method]) {
     AudioManager* audioManager = AudioManager.shared;
     NSString* ip = call.arguments[@"ip"];
@@ -38,6 +43,14 @@
     [audioManager unMuteAudio];
     result(nil);
 
+  } else if ([@"printLog" isEqualToString:call.method]) {
+    AudioManager* audioManager = AudioManager.shared;
+    char* cLog = [audioManager memlog_get];
+    if (strlen(cLog) > 0) {
+        NSLog(@"Log: %s", cLog);
+        [audioManager memlog_clear];
+    }
+    result(nil);
   } else {
     result(FlutterMethodNotImplemented);
   }
