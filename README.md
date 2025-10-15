@@ -1,5 +1,9 @@
 # af_audio_flutter
 
+## Updated 10/24 for API 35 and 16kb load boundary requirements.
+
+## Overview
+
 Flutter plugin for AudioFetch SDK for iOS and Android host apps. This plugin, along with the af_disco_flutter discovery library (available under NDA) allows host apps implemented in Flutter to use the AudioFetch SDK to discover AudioFetch boxes and play real-time low-latency audio.
 
 This repo contains both the AF audio plugin as well as the sample app that uses the AF audio plugin and the AF discovery plugin. The AF discovery plugin for Fluttr is in a separate repo called af_disco_flutter.
