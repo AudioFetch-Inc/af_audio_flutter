@@ -1,6 +1,6 @@
 # af_audio_flutter
 
-## Updated 10/24 for API 35 and 16kb load boundary requirements.
+## Updated 11/25 for API 35 and 16kb load boundary requirements.
 
 ## Overview
 
